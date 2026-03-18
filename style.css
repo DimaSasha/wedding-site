@@ -359,7 +359,7 @@ body::before {
 
 .detail-label {
   display: block;
-  font-size: 0.65rem;
+  font-size: 1.45rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
@@ -483,7 +483,7 @@ body::before {
 .footer {
   padding: 3rem 1.5rem;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   color: var(--soft-brown);
   letter-spacing: 0.12em;
 }
@@ -496,7 +496,7 @@ body::before {
 }
 
 .footer-contact {
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   color: var(--soft-brown);
   margin-top: 1rem;
   opacity: 0.9;
@@ -574,7 +574,7 @@ body::before {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.8rem;
+  font-size: 1.25rem;
   color: var(--gold);
   text-decoration: none;
   letter-spacing: 0.15em;
@@ -606,7 +606,7 @@ body::before {
 }
 
 .timing-time {
-  font-size: 0.65rem;
+  font-size: 1.25rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
@@ -620,7 +620,7 @@ body::before {
 }
 
 .form-deadline {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: var(--gold);
   margin-bottom: 1.25rem;
   letter-spacing: 0.12em;
@@ -840,7 +840,7 @@ body::before {
 }
 
 .welcome-block__text {
-  font-size: 0.95rem;
+  font-size: 1.35rem;
   line-height: 1.8;
   color: var(--soft-brown);
 }
