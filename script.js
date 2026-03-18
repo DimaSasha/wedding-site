@@ -53,7 +53,7 @@ document.getElementById('rsvp-form').addEventListener('submit', function(e) {
   var presence = data.get('presence');
 
   // 👉 ВСТАВЬ СЮДА СВОЙ НОВЫЙ TOKEN
-  var TOKEN = 'ВСТАВЬ_СЮДА_TOKEN';
+  var TOKEN = '8028087308:AAG4TMJHn8wW2VUcO6wKce17YCYqzn8qio0';
 
   // 👉 ТВОЙ chat_id
   var CHAT_ID = '227522781';
