@@ -42,16 +42,51 @@
 })();
 
 
-// 💌 Отправка формы БЕЗ Formspree страницы
+// 💌 Отправка формы + Telegram
 document.getElementById('rsvp-form').addEventListener('submit', function(e) {
   e.preventDefault();
 
   var form = e.target;
   var data = new FormData(form);
 
-  // плавное исчезновение страницы
+  var fio = data.get('fio');
+  var presence = data.get('presence');
+
+  // 👉 ВСТАВЬ СЮДА СВОЙ НОВЫЙ TOKEN
+  var TOKEN = 'ВСТАВЬ_СЮДА_TOKEN';
+
+  // 👉 ТВОЙ chat_id
+  var CHAT_ID = '227522781';
+
+  var presenceText = 'Не знает';
+  if (presence === 'yes') presenceText = 'Будет';
+  if (presence === 'no') presenceText = 'Не сможет';
+
+  var text = `
+💍 <b>Новая заявка на свадьбу!</b>
+
+👤 <b>Имя:</b> ${fio}
+📌 <b>Ответ:</b> ${presenceText}
+`;
+
+  // ✨ Плавное исчезновение
+  document.body.style.transition = 'opacity 0.4s ease';
   document.body.style.opacity = '0';
 
+  // 📩 Отправка в Telegram
+  fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      chat_id: CHAT_ID,
+      text: text,
+      parse_mode: 'HTML'
+    })
+  });
+
+  // 📩 Отправка в Formspree (чтобы была почта)
   fetch(form.action, {
     method: 'POST',
     body: data,
@@ -61,8 +96,8 @@ document.getElementById('rsvp-form').addEventListener('submit', function(e) {
   })
   .then(function(response) {
     if (response.ok) {
-      // мгновенный переход на твою страницу
-      window.location.href = 'https://DimaSasha.github.io/wedding-site/thanks.html';
+      // 🚀 переход на красивую страницу
+      window.location.href = 'https://dimasasha.github.io/wedding-site/thanks.html';
     } else {
       alert('Ошибка отправки формы');
       document.body.style.opacity = '1';
