@@ -19,10 +19,7 @@
   setInterval(updateCountdown, 1000);
 })();
 
-document.getElementById('rsvp-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Спасибо! Ваш ответ записан. (Для сбора ответов подключите бэкенд или форму, например Google Forms.)');
-});
+
 
 (function() {
   var observer = new IntersectionObserver(function(entries) {
