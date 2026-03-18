@@ -2,10 +2,89 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Спасибо</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Спасибо 💛</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .thanks-wrapper {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .thanks-card {
+      max-width: 500px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06), 0 1px 0 rgba(255,255,255,0.9) inset;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .thanks-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .thanks-text {
+      font-size: 1rem;
+      color: var(--soft-brown);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .thanks-btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--charcoal);
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .thanks-btn:hover {
+      background: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(184, 134, 11, 0.25);
+    }
+  </style>
 </head>
-<body style="text-align:center; font-family:sans-serif; padding:50px;">
-  <h1>Спасибо 💍</h1>
-  <p>Мы получили ваш ответ!</p>
+
+<body>
+
+<div class="thanks-wrapper">
+  <div class="thanks-card">
+    
+    <div class="thanks-title">Спасибо 💛</div>
+
+    <div class="thanks-text">
+      Ваш ответ успешно отправлен.<br><br>
+      Нам очень важно ваше присутствие,<br>
+      и мы будем счастливы разделить этот день вместе с вами!
+    </div>
+
+    <a href="/" class="thanks-btn">Вернуться назад</a>
+
+  </div>
+</div>
+
 </body>
 </html>
