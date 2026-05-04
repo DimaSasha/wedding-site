@@ -1003,6 +1003,7 @@ body::before {
   display: flex;
   gap: 0.6rem;
   align-items: center;
+  justify-content: center;  /* ← Эту строку добавить */
 }
 
 .color-swatch {
